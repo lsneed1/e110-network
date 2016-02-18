@@ -1,6 +1,7 @@
 var locations = [
-  ['213 Quarry Road, Palo Alto, CA 94304', 37.441619, -122.169396, 1],
-  ['Vaden Health Center, 866 Campus Drive, Stanford, CA-94305', 37.421998, -122.163619, 2]
+  ['401 Quarry Road, Palo Alto, CA 94304', 37.438627, -122.170725, 1],
+  ['201 San Antonio Circle, Suite 200, Mountain View, CA', 37.406509, -122.109083, 2],
+  ['1100 S El Camino Real, Suite #1, San Mateo, CA', 37.556464, -122.319298, 3]
 ];
 
 var map = new google.maps.Map(document.getElementById('map'), {
