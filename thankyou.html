@@ -1,36 +1,66 @@
 <html>
 <head>
 <title>Thank you!</title>
+<link rel="stylesheet" href="css/thankYou.css">
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700|Oswald:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<div id = "totalBodyContainer">
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-<p>Thank you for completing Engineering Empathy's VR experience! We hope you feel more relaxed and confident now.</p>
-<p>To enhance the impact of this experience, we have identified a few counselors near you (refer to the map and the table below). We highly recommend you to share your experiences and concerns with them.</p>
-  <div id="map" style="width: 500px; height: 400px;"></div>
+	<a href="index.html" id="clickToConnect">Chat with other patients and counselors</a>
+  <div id="map" style="width: 375px; height: 200px;"></div>
     <script type="text/javascript" src="js/google-map-view.js"></script>
 <table>
-<tr>
+<!--<tr>
 <th>Name</th>
 <th>Address</th>
 <th>Phone number</th>
 <th>Specialization</th>
 <th>Insurance</th>
-</tr>
+</tr> -->
 <tr>
-<td>Simon Tan, PsyD</td>
-<td>213 Quarry Road, Palo Alto, CA 94304</td>
-<td>650-723-6469</td>
-<td>tbd</td>
-<td>Cardinal Care</td>
+		<a href = "https://stanfordhealthcare.org/doctors/g/cheryl-gorefelton.html#summary-content" <div class="infoContainer"><img class="photo" id="cheryl" src="img/CherylGore-Felton.png">
+		<div class="info"> <p> <span class="name">Dr. Cheryl Gore-Felton, Ph.D</span>
+			<br>
+			<span class="contact">401 Quarry Road, Palo Alto, CA<!--, CA 94304 -->
+			<br>
+			650 498 9111</span>
+			<br>
+			<span class="insurance">Cardinal Care, Humana</span>
+			<br>
+		</p> </div> </a>
+		<!-- https://stanfordhealthcare.org/doctors/g/cheryl-gorefelton.html#summary-content -->
 </tr>
+<div style="clear: both;"></div>
 <tr>
-<td>Cathy Lee</td>
-<td>Vaden Health Center, 866 Campus Drive, Stanford, CA-94305</td>
-<td>650-498-2336</td>
-<td>TBD</td>
-<td>Cardinal Care</td>
+<div class="infoContainer"><img class="photo" src="img/CarolWilliams.jpg">
+		<a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=32866&sid=1455748090.4706_7374&city=Palo+Alto&state=CA&spec=334&tr=ResultsName"> <div class="info"> <p> <span class="name">Dr. Carol Williams, Ph.D</span>
+			<br>
+			<span class="contact">201 San Antonio Circle, Suite 200, Mountain View, CA <!--, CA 94040-->
+			<br>
+			650 924 9799</span>
+			<br>
+			<span class="insurance">Blue Cross Blue Shield, Medicare, etc.</span>
+			<br>
+		</p> </div></a>
+</tr>
+<div style="clear: both;"></div>
+<tr>
+<div class="infoContainer"><img class="photo" src="img/RobertWilliams.jpg">
+		<a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=65809&sid=1455748090.4706_7374&city=Palo+Alto&state=CA&spec=334&tr=ResultsPhoto"><div class="info"> <p> <span class="name">Dr. Robert Williams, Ph.D</span>
+			<br>
+			<span class="contact">1100 S El Camino Real, Suite #1, San Mateo, CA <!--, CA 94040-->
+			<br>
+			415 787 2907</span>
+			<br>
+			<span class="insurance">Aetna, Blue Shield - PPO only, etc.</span>
+			<br>
+		</p> </div></a>
 </tr>
 </table>
-<a href="index.html">Click here to chat with other patients and counselors</a>
+</div>
+
 </body>
 </html>
+
+<!-- https://therapists.psychologytoday.com/rms/prof_results.php?city=Palo+Alto&state=CA&spec=334 -->
