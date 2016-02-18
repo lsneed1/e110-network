@@ -12,14 +12,14 @@
 
     <body>
         <header>
-            <h1><a href="/">Engineering Empathy Interaction Forums</a></h1>
+           <!-- <h1><a href="/">Anxiety Community</a></h1>-->
         </header>
 
         <div id="wrapper">
             <div id="navigation">
                 <div id="interactors">
                     <!-- buttons and search -->
-                    <a href="#" class="btn">New thread/question form</a>
+                    <a href="#" class="btn">New Post</a>
                     <input type="text" name="search" id="search"
                         placeholder="Search threads/questions..." />
                 </div>
@@ -44,7 +44,7 @@
                     localStorage. }}
                 <div class="list-question question-info" id="{{ this.id }}">
                     <h3>{{ this.subject }}</h3>
-                    <p>{{ this.question }}</p>
+                    <p class="currentResponse">{{ this.question }}</p>
                 </div>
                 {{/each}}
             {{else}}
@@ -59,41 +59,44 @@
              and responses) in #main-panel tag -->
         <script type="text/x-handlebars-template"
                 id="expanded-question-template">
-            <h3>Thread/question</h3>
+            
+            <br>
+            <br>
+            <h3>Thread/Question</h3>
             <div class="question">
                 <h4>{{ subject }}</h4>
-                <p>{{ question }}</p> 
+                <p class="currentResponse">{{ question }}</p> 
             </div>
 
             <div class="resolve-container">
-              <a href="#" class="resolve btn">Resolve</a>
+             <a href="#" class="btn" id="resolveButton">Resolve</a>
             </div>
 
             <div class="responses">
-                <h3>Comments/responses</h3>
+                <h3 id="commentsResponses">Comments/Responses</h3>
 
                 {{#if responses}}
                     {{#each responses}}
                     <div class="response">
                         <h4>{{ this.name }}</h4>
-                        <p>{{ this.response }}</p>
+                        <p class="currentResponse">{{ this.response }}</p>
                     </div>
                     {{/each}}
                 {{else}}
                     {{! no comments or responses found }}
-                    <p>No comments or responses submitted yet!</p>
+                    <p id="noResponses">No comments or responses submitted yet!</p>
                 {{/if}}
             </div>
 
             <form class="cf" id="response-form">
                 <h3>Add Comment/Response</h3>
                 <div>
-                    <label for="name">Name</label>
+                    <label for="name" id="label">Name</label>
                     <input type="text" name="name" placeholder="John Doe" />
                 </div>
 
                 <div>
-                    <label for="response">Comment/Response</label>
+                    <label for="response" id="responseBox">Comment/Response</label>
                     <textarea rows="5" cols="40" type="text"
                         name="response"></textarea>
                 </div>
@@ -105,9 +108,10 @@
         <!-- template to display question form in #main-panel tag -->
         <script type="text/x-handlebars-template" id="question-form-template">
             <form class="cf" id="question-form">
-                <h2>Welcome to <span>Engineering Empathy Interaction Forums</span>!</h2>
-                <p>Enter a subject and thread content/question to get started.</p>
-<b> NOTE: all content here is moderated by our team of counselors. Any content that is too depressive (content about suicide, for instance) is strictly not allowed. We also use auto-filters to filter such content. Repeated warnings will lead to a permanent ban from posting.</b>
+                <h2 id="welcome">Welcome to <span>the Anxiety Community</span>!</h2>
+<b id="warning"> All content here is moderated by our team of counselors. Any content that is a threat to yourself or others is strictly not allowed. We also use auto-filters to filter such content. Repeated warnings will lead to a permanent ban from posting.</b>
+    <br>
+    <br>
 
                 <div>
                     <input type="text" name="subject" placeholder="Subject" />
@@ -115,24 +119,33 @@
 
                 <div>
                     <textarea rows="5" cols="40" name="question"
-                        placeholder="Thread/question"></textarea>
+                        placeholder="Thread/Question"></textarea>
                 </div>
 
                 <input type="submit" class="btn" value="Submit" /> 
             </form>
+
+            <br>
+            <br>
+
+             <div id="chat">
+             <h3> Chat directly with a 24/7 counselor </h2>
+            <p id="chatText"> Select one from the available counselors below.</p>
+                <select>
+                    <option>Ronald C. Albucher, MD</option>
+                    <option>Laurel Zappert Banks, PsyD</option>
+                    <option>Naomi Brown, PhD</option>
+                    <option>Latoya C. Conner, PhD</option>
+                    <option>Ariana Davidson, LCSW</option>
+                </select>
+                <br>
+                <input type="submit" class="btn" id="chatButton" value="Chat now" /> 
+        </div>
         </script>
 
         <!-- JavaScript -->
         <script type="text/javascript" src="js/handlebars.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
-<p> Want to chat directly with our 24x7 counselors?<br>Select one from the available counselors below.</p>
-<select>
-<option>Ronald C. Albucher, MD</option>
-<option>Laurel Zappert Banks, PsyD</option>
-<option>Naomi Brown, PhD</option>
-<option>Latoya C. Conner, PhD</option>
-<option>Ariana Davidson, LCSW</option>
-</select>
-                <input type="submit" class="btn" value="Chat now" /> 
+
     </body>
 </html>
